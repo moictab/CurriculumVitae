@@ -1,8 +1,11 @@
-package com.moictab.curriculumvitae;
+package com.moictab.curriculumvitae.activities;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,8 +16,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.moictab.curriculumvitae.R;
+import com.moictab.curriculumvitae.fragments.ExperienceFragment;
+import com.moictab.curriculumvitae.fragments.FormationFragment;
+import com.moictab.curriculumvitae.fragments.PresentationFragment;
+import com.moictab.curriculumvitae.fragments.ProjectsFragment;
+
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, ExperienceFragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,12 +89,22 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
+        if (id == R.id.nav_presentation) {
+            Fragment fragment = new PresentationFragment();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.base_layout, fragment).commit();
+        } else if (id == R.id.nav_experience) {
+            Fragment fragment = new ExperienceFragment();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.base_layout, fragment).commit();
+        } else if (id == R.id.nav_formation) {
+            Fragment fragment = new FormationFragment();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.base_layout, fragment).commit();
+        } else if (id == R.id.nav_projects) {
+            Fragment fragment = new ProjectsFragment();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.base_layout, fragment).commit();
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
@@ -97,5 +116,10 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+        // TODO
     }
 }

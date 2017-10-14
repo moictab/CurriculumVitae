@@ -3,15 +3,19 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_presentation"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:title="Experience" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_experience"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Experience" />
+        <item
+            android:id="@+id/nav_formation"
             android:icon="@drawable/ic_menu_gallery"
             android:title="Gallery" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_projects"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Slideshow" />
         <item

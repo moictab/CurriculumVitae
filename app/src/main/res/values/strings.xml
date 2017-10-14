@@ -5,4 +5,26 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <!-- Experiencias laborales -->
+    <string name="experience">  <![CDATA[
+    <p>
+    Líder del equipo de desarrollo (3 personas) en el proyecto de implementación de un sistema de tests automatizados con Selenium para la web corporativa de Pobeda Airlines LLC (Aeroflot Group), empleando C#, la implementación de Selenium para .NET, NUnit como framework de unit testing y llevando el desarrollo como BDD mediante Cucumber. <br><br>Implementación del sistema de logs para la web y todos los procesos asociados de Pobeda Airlines LLC, así como la preparación de las herramientas necesarias para la visualización y análisis de dichos logs (Kibana y Elastalert), empleando ElasticSearch como centro de datos y Elastic stack al completo.<br><br>Realización de tareas de mantenimiento en el backend de la página (C#) con pequeñas modificaciones del frontend (JavaScript).<br><br>Entorno de trabajo consistente en metodología ágil (SCRUM) utilizando Jira, Microsoft Project y Git Workflow. Hice uso de las librerías más comunes en el entorno .NET, como log4net y Castle Windsor.
+    </p>
+    <p>
+    Desarrollo del programa de fidelización de clientes, incluyendo la creación de la web API del sistema con ASP.NET. <br><br>Realización de tareas de mantenimiento en el sistema centralizado de gestión de las clínicas, empleando C# y Team Foundation Server (TFS) en un entorno SCRUM.
+    </p>
+    <p>
+    Desarrollos personalizados para el cliente final de webs basadas en Magento, con modificaciones del core mediante PHP y puesta en producción de las mismas, encargándome del mantenimiento posterior.<br><br>Desarrollo durante año y medio de la aplicación Android para cliente final en el negocio de la logística de la alimentación, que es empleada en tablets por los repartidores de la empresa con las siguientes funcionalidades:<br>- Gestionar e informar acerca del stock y su formato al repartidor<br>- Gestionar ventas, reservas y facturas<br>- Gestionar usuarios y credenciales para evitar interferencias con otros compañeros<br>- Incluir un sistema de catálogo para que los repartidores puedan vender nuevos artículos directamente al cliente<br>- Sincronización de información con 2 ERPs (SAP y EKON)<br><br>Para ello se creó una arquitectura basada en servicios web SOAP mediante ASP.NET, con una API intermedia empleando EntityFramework que permitían la sincronización de la información existente en el ERP para que estuviera actualizada en las tablets, tanto bajo demanda como cacheada para los casos en los que el repartidor no tuviera cobertura por realizar rutas de montaña.<br><br>También se realizaron varios desarrollos personalizados en .NET y SAP para clientes finales.
+    </p>
+    <p>
+    Periodo de prácticas como desarrollador web y móvil en una empresa de venta online de cuchillería de Albacete. Durante las prácticas se realizaron diversas tareas, como la creación de webs asociadas (blogs), mejoras en la web principal (www.cuchilleriadeportiva.es), realización de tareas de posicionamiento (SEO y SEM) y desarrollo de la versión móvil de la página.
+    </p>
+    <p>
+    Miembro del equipo de desarrollo de una página web gubernamental de gestión para el gobierno de Cantabria. El desarrollo se realizó mediante las tecnologías web basadas en J2EE, Struts, Spring e Hibernate.
+    </p>
+    ]]></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
