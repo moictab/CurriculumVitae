@@ -1,6 +1,7 @@
 package com.moictab.curriculumvitae.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.moictab.curriculumvitae.R;
+import com.moictab.curriculumvitae.activities.ExperienceActivity;
 import com.moictab.curriculumvitae.model.Experience;
 
 import java.util.List;
@@ -18,6 +20,7 @@ import java.util.List;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.CustomViewHolder> {
 
+    private final static String EXPERIENCE_ID = "EXPERIENCE_ID";
     private List<Experience> experiences;
     private Context context;
 
@@ -26,23 +29,32 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Custom
         this.context = context;
     }
 
-    public static class CustomViewHolder extends RecyclerView.ViewHolder {
+    static class CustomViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView tvTitle;
-        public TextView tvPeriod;
-        public TextView tvPlace;
-        public TextView tvDescription;
+        TextView tvTitle;
+        TextView tvPeriod;
+        TextView tvPlace;
+        TextView tvDescription;
 
-        public CustomViewHolder(View itemView) {
+        CustomViewHolder(final View itemView) {
             super(itemView);
 
             tvTitle = itemView.findViewById(R.id.tv_title);
             tvPeriod = itemView.findViewById(R.id.tv_period);
             tvPlace = itemView.findViewById(R.id.tv_place);
             tvDescription = itemView.findViewById(R.id.tv_description);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Context context = itemView.getContext();
+                    Intent intent = new Intent(context, ExperienceActivity.class);
+                    intent.putExtra(EXPERIENCE_ID, getAdapterPosition());
+                    context.startActivity(intent);
+                }
+            });
         }
     }
-
 
     public CustomViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
@@ -52,7 +64,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Custom
     }
 
     @Override
-    public void onBindViewHolder(CustomViewHolder holder, int position) {
+    public void onBindViewHolder(CustomViewHolder holder, final int position) {
         holder.tvDescription.setText(experiences.get(position).description);
         holder.tvPeriod.setText(experiences.get(position).period);
         holder.tvPlace.setText(experiences.get(position).place);

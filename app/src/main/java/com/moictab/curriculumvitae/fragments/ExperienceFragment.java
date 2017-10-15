@@ -17,9 +17,6 @@ import com.moictab.curriculumvitae.model.Experience;
 
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
