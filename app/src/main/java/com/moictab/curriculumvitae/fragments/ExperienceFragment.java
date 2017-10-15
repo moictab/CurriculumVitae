@@ -4,15 +4,21 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.moictab.curriculumvitae.R;
+import com.moictab.curriculumvitae.adapters.RecyclerAdapter;
 import com.moictab.curriculumvitae.controller.ExperienceController;
 import com.moictab.curriculumvitae.model.Experience;
 
 import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +29,10 @@ import java.util.List;
  * create an instance of this fragment.
  */
 public class ExperienceFragment extends Fragment {
+
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -70,8 +80,15 @@ public class ExperienceFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_experience, container, false);
         List<Experience> experiences = new ExperienceController().GetExperiencesFromAssets(getActivity());
+
+        View view = inflater.inflate(R.layout.fragment_experience, container, false);
+        RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
+        recyclerView.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager(layoutManager);
+        adapter = new RecyclerAdapter(experiences, getActivity());
+        recyclerView.setAdapter(adapter);
 
         // Inflate the layout for this fragment
         return view;
