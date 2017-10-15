@@ -1,0 +1,37 @@
+[
+  {
+    "Id": "1",
+    "Title": "Consultor",
+    "Place": "Newshore",
+    "Period": "nov. de 2016 - jul. de 2017 (9 meses)",
+    "Description": "Líder del equipo de desarrollo (3 personas) en el proyecto de implementación de un sistema de tests automatizados con Selenium para la web corporativa de Pobeda Airlines LLC (Aeroflot Group), empleando C#, la implementación de Selenium para .NET,      NUnit como framework de unit testing y llevando el desarrollo como BDD mediante        Cucumber.        Implementación del sistema de logs para la web y todos los procesos asociados de Pobeda Airlines LLC, así como la preparación de las herramientas necesarias para la visualización y análisis de dichos logs (Kibana y Elastalert), empleando ElasticSearch como centro de datos y Elastic stack al completo.        Realización de tareas de mantenimiento en el backend de la página (C#) con pequeñas        modificaciones del frontend (JavaScript).        Entorno de trabajo consistente en metodología ágil (SCRUM) utilizando Jira, Microsoft Project y Git Workflow. Hice uso de las librerías más comunes en el entorno .NET, como log4net y Castle Windsor."
+  },
+  {
+    "Id": "2",
+    "Title": "Desarrollador sénior .NET",
+    "Place": "Clínica Baviera",
+    "Period": "may. de 2016 - oct. de 2017 (6 meses)",
+    "Description": "Desarrollo del programa de fidelización de clientes, incluyendo la creación de la web API del sistema con ASP.NET. Realización de tareas de mantenimiento en el sistema centralizado de gestión de las clínicas, empleando C# y Team Foundation Server (TFS) en un entorno SCRUM."
+  },
+  {
+    "Id": "3",
+    "Title": "Desarrollador sénior",
+    "Place": "Advantic Consultores",
+    "Period": "nov. de 2014 - abr. de 2016 (1 año y 6 meses)",
+    "Description": "Desarrollos personalizados para el cliente final de webs basadas en Magento, con modificaciones del core mediante PHP y puesta en producción de las mismas, encargándome del mantenimiento posterior. Desarrollo durante año y medio de la aplicación Android para cliente final en el negocio de la logística de la alimentación, que es empleada en tablets por los repartidores de la empresa con las siguientes funcionalidades: - Gestionar e informar acerca del stock y su formato al repartidor - Gestionar ventas, reservas y facturas - Gestionar usuarios y credenciales para evitar interferencias con otros compañeros - Incluir un sistema de catálogo para que los repartidores puedan vender nuevos        artículos directamente al cliente        - Sincronización de información con 2 ERPs (SAP y EKON)        Para ello se creó una arquitectura basada en servicios web SOAP mediante ASP.NET, con        una API intermedia empleando EntityFramework que permitían la sincronización de la        información existente en el ERP para que estuviera actualizada en las tablets, tanto        bajo demanda como cacheada para los casos en los que el repartidor no tuviera cobertura por realizar rutas de montaña. También se realizaron varios desarrollos personalizados en .NET y SAP para clientes finales."
+  },
+  {
+    "Id": "4",
+    "Title": "Desarrollador junior",
+    "Place": "Cuchillería Deportiva S.L.",
+    "Period": "feb. de 2014 - may. de 2014 (4 meses)",
+    "Description": "Periodo de prácticas como desarrollador web y móvil en una empresa de venta online de cuchillería de Albacete. Durante las prácticas se realizaron diversas tareas, como la creación de webs asociadas (blogs), mejoras en la web principal (www.cuchilleriadeportiva.es), realización de tareas de posicionamiento (SEO y SEM) y desarrollo de la versión móvil de la página."
+  },
+  {
+    "Title": "Desarrollador en prácticas",
+    "Place": "Delaware",
+    "Period": "nov. de 2013 - feb. de 2014 (4 meses)",
+    "Description": "Miembro del equipo de desarrollo de una página web gubernamental de gestión para el gobierno de Cantabria. El desarrollo se realizó mediante las tecnologías web basadas en J2EE, Struts, Spring e Hibernate."
+  }
+]
+

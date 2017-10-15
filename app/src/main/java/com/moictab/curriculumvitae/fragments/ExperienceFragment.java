@@ -4,13 +4,15 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.moictab.curriculumvitae.R;
+import com.moictab.curriculumvitae.controller.ExperienceController;
+import com.moictab.curriculumvitae.model.Experience;
+
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,6 +23,7 @@ import com.moictab.curriculumvitae.R;
  * create an instance of this fragment.
  */
 public class ExperienceFragment extends Fragment {
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -67,13 +70,13 @@ public class ExperienceFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View inflatedView = inflater.inflate(R.layout.fragment_experience, container, false);
-        TextView tvExperience = inflatedView.findViewById(R.id.experience);
-        tvExperience.setText(Html.fromHtml(getString(R.string.experience)));
+        View view = inflater.inflate(R.layout.fragment_experience, container, false);
+        List<Experience> experiences = new ExperienceController().GetExperiencesFromAssets(getActivity());
 
         // Inflate the layout for this fragment
-        return inflatedView;
+        return view;
     }
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {

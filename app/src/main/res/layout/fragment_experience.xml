@@ -1,13 +1,35 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.moictab.curriculumvitae.fragments.ExperienceFragment">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/experience"
+    <LinearLayout
+        android:id="@+id/experience_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="vertical" />
+        android:orientation="vertical"
 
-</FrameLayout>
+        tools:context="com.moictab.curriculumvitae.fragments.ExperienceFragment">
+
+        <include
+            android:id="@+id/experience_layout_1"
+            layout="@layout/experience_layout" />
+
+        <include
+            android:id="@+id/experience_layout_2"
+            layout="@layout/experience_layout" />
+
+        <include
+            android:id="@+id/experience_layout_3"
+            layout="@layout/experience_layout" />
+
+        <include
+            android:id="@+id/experience_layout_4"
+            layout="@layout/experience_layout" />
+
+        <include
+            android:id="@+id/experience_layout_5"
+            layout="@layout/experience_layout" />
+
+    </LinearLayout>
+</ScrollView>
