@@ -23,7 +23,7 @@ import com.moictab.curriculumvitae.fragments.PresentationFragment;
 import com.moictab.curriculumvitae.fragments.ProjectsFragment;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, ExperienceFragment.OnFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener, ExperienceFragment.OnFragmentInteractionListener, PresentationFragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,8 +105,6 @@ public class MainActivity extends AppCompatActivity
             Fragment fragment = new ProjectsFragment();
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.base_layout, fragment).commit();
-        } else if (id == R.id.nav_manage) {
-
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
