@@ -22,8 +22,12 @@ import com.moictab.curriculumvitae.fragments.FormationFragment;
 import com.moictab.curriculumvitae.fragments.PresentationFragment;
 import com.moictab.curriculumvitae.fragments.ProjectsFragment;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, ExperienceFragment.OnFragmentInteractionListener, PresentationFragment.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements
+        NavigationView.OnNavigationItemSelectedListener,
+        ExperienceFragment.OnFragmentInteractionListener,
+        PresentationFragment.OnFragmentInteractionListener,
+        FormationFragment.OnFragmentInteractionListener,
+        ProjectsFragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

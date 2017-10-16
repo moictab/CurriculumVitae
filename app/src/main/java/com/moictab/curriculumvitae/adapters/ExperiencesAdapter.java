@@ -18,25 +18,25 @@ import java.util.List;
  * Created by moict on 15/10/2017.
  */
 
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.CustomViewHolder> {
+public class ExperiencesAdapter extends RecyclerView.Adapter<ExperiencesAdapter.ExperienceViewHolder> {
 
     private final static String EXPERIENCE_ID = "EXPERIENCE_ID";
     private List<Experience> experiences;
     private Context context;
 
-    public RecyclerAdapter(List<Experience> experiences, Context context) {
+    public ExperiencesAdapter(List<Experience> experiences, Context context) {
         this.experiences = experiences;
         this.context = context;
     }
 
-    static class CustomViewHolder extends RecyclerView.ViewHolder {
+    static class ExperienceViewHolder extends RecyclerView.ViewHolder {
 
         TextView tvTitle;
         TextView tvPeriod;
         TextView tvPlace;
         TextView tvDescription;
 
-        CustomViewHolder(final View itemView) {
+        ExperienceViewHolder(final View itemView) {
             super(itemView);
 
             tvTitle = itemView.findViewById(R.id.tv_title);
@@ -56,15 +56,15 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Custom
         }
     }
 
-    public CustomViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ExperienceViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
         View itemView = inflater.inflate(R.layout.experience_layout, parent, false);
 
-        return new CustomViewHolder(itemView);
+        return new ExperienceViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(CustomViewHolder holder, final int position) {
+    public void onBindViewHolder(ExperienceViewHolder holder, final int position) {
         holder.tvDescription.setText(experiences.get(position).description);
         holder.tvPeriod.setText(experiences.get(position).period);
         holder.tvPlace.setText(experiences.get(position).place);

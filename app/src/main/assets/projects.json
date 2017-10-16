@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Culturalba",
+    "period": "abr. de 2016 - abr. de 2016",
+    "description": "Aplicación que obtiene datos de eventos culturales de la web del Ayuntamiento de Albacete y los muestra en el dispositivo Android."
+  },
+  {
+    "title": "deCañas",
+    "period": "ene. de 2014 - jul. de 2014",
+    "description": "deCañas es una aplicación Android que muestra sobre un mapa los establecimientos de caña y tapa cercanos. El usuario puede consultar toda la información de los mismos e interactuar con otros añadiendo y leyendo comentarios, valorando los establecimientos, subiendo fotografías de las tapas y de los locales... Se pretende con la aplicación proporcionar toda la información posible a la hora de salir de cañas con los amigos, y crear una red social alrededor de dicha actividad mediante la aplicación Android y su página web asociada, en la que los dueños de los establecimientos pueden añadir promociones, ofertas, precios y darse a conocer. Este proyecto se utilizó como Proyecto Fin de Máster para el Máster en Tecnologías Web de la UCLM y obtuvo una puntuación de 8 sobre 10. Actualmente se están añadiendo nuevas funcionalidades y características y estará disponible en la Play Store."
+  },
+  {
+    "title": "CMMI Helper para Android",
+    "period": "ene. de 2013 – jul. de 2013",
+    "description": "CMMI Helper es una aplicación desarrollada para la plataforma Android, diseñada y creada para apoyar la evaluación del modelo de calidad CMMI en pequeñas y medianas empresas o para su utilización didáctica. Esta herramienta permite al usuario gestionar las organizaciones que se van a estudiar almacenando información relevante de las mismas, así como crear una o varias evaluaciones asociadas para poder llevar a cabo su ejecución siguiendo las directrices marcadas por el modelo CMMI-DEV v1.3, que permitirá conocer a qué nivel de madurez o capacidad puede la empresa someterse a examen con posibilidades de éxito, analizando las fortalezas y debilidades de sus procesos de desarrollo software."
+  }
+]
+

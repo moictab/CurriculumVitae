@@ -1,19 +1,14 @@
 package com.moictab.curriculumvitae.model;
 
-
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Created by moict on 15/10/2017.
+ * Created by moict on 16/10/2017.
  */
 
-public class Experience {
-
+public class Project {
     @SerializedName("title")
     public String title;
-
-    @SerializedName("place")
-    public String place;
 
     @SerializedName("period")
     public String period;

@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.moictab.curriculumvitae.R;
-import com.moictab.curriculumvitae.adapters.RecyclerAdapter;
+import com.moictab.curriculumvitae.adapters.ExperiencesAdapter;
 import com.moictab.curriculumvitae.controller.ExperienceController;
 import com.moictab.curriculumvitae.model.Experience;
 
@@ -27,7 +27,6 @@ import java.util.List;
  */
 public class ExperienceFragment extends Fragment {
 
-    private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
 
@@ -84,7 +83,7 @@ public class ExperienceFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
-        adapter = new RecyclerAdapter(experiences, getActivity());
+        adapter = new ExperiencesAdapter(experiences, getActivity());
         recyclerView.setAdapter(adapter);
 
         // Inflate the layout for this fragment
