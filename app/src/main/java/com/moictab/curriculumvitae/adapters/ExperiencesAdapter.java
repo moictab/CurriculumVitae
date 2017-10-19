@@ -2,16 +2,24 @@ package com.moictab.curriculumvitae.adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.media.Image;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.moictab.curriculumvitae.R;
 import com.moictab.curriculumvitae.activities.ExperienceActivity;
 import com.moictab.curriculumvitae.model.Experience;
 
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.InputStream;
 import java.util.List;
 
 /**
@@ -34,7 +42,7 @@ public class ExperiencesAdapter extends RecyclerView.Adapter<ExperiencesAdapter.
         TextView tvTitle;
         TextView tvPeriod;
         TextView tvPlace;
-        TextView tvDescription;
+        ImageView ivExperience;
 
         ExperienceViewHolder(final View itemView) {
             super(itemView);
@@ -42,7 +50,7 @@ public class ExperiencesAdapter extends RecyclerView.Adapter<ExperiencesAdapter.
             tvTitle = itemView.findViewById(R.id.tv_title);
             tvPeriod = itemView.findViewById(R.id.tv_period);
             tvPlace = itemView.findViewById(R.id.tv_place);
-            tvDescription = itemView.findViewById(R.id.tv_description);
+            ivExperience = itemView.findViewById(R.id.iv_experience);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -65,10 +73,17 @@ public class ExperiencesAdapter extends RecyclerView.Adapter<ExperiencesAdapter.
 
     @Override
     public void onBindViewHolder(ExperienceViewHolder holder, final int position) {
-        holder.tvDescription.setText(experiences.get(position).description);
         holder.tvPeriod.setText(experiences.get(position).period);
         holder.tvPlace.setText(experiences.get(position).place);
         holder.tvTitle.setText(experiences.get(position).title);
+
+        try {
+            BufferedInputStream stream = new BufferedInputStream(context.getAssets().open(experiences.get(position).image));
+            Bitmap bitmap = BitmapFactory.decodeStream(stream);
+            holder.ivExperience.setImageBitmap(bitmap);
+        } catch (Exception ex) {
+            Log.e("ERROR SETTING IMAGE", ex.getMessage());
+        }
     }
 
     @Override

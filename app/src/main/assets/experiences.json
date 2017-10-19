@@ -1,33 +1,43 @@
 [
   {
-  "title": "Consultor",
+    "title": "Consultor",
+    "image": "newshore.jpg",
+    "website": "http://www.newshore.es",
     "place": "Newshore",
-    "period": "nov. de 2016 - jul. de 2017 (9 meses)",
-    "description": "Líder del equipo de desarrollo (3 personas) en el proyecto de implementación de un sistema de tests automatizados con Selenium para la web corporativa de Pobeda Airlines LLC (Aeroflot Group), empleando C#, la implementación de Selenium para .NET,      NUnit como framework de unit testing y llevando el desarrollo como BDD mediante        Cucumber.        Implementación del sistema de logs para la web y todos los procesos asociados de Pobeda Airlines LLC, así como la preparación de las herramientas necesarias para la visualización y análisis de dichos logs (Kibana y Elastalert), empleando ElasticSearch como centro de datos y Elastic stack al completo.        Realización de tareas de mantenimiento en el backend de la página (C#) con pequeñas        modificaciones del frontend (JavaScript).        Entorno de trabajo consistente en metodología ágil (SCRUM) utilizando Jira, Microsoft Project y Git Workflow. Hice uso de las librerías más comunes en el entorno .NET, como log4net y Castle Windsor."
+    "period": "nov. 2016 - jul. 2017 (9 months)",
+    "description": "Leader of the development team (3 people) in the project of implementing an automated tests system with Selenium for the corporative website of Pobeda Airlines LLC (Aeroflot Group), using C#, the .NET implentation of Selenium and managing the development as BDD using Cucumber. The tests were run automatically by Jenkins.\n\nImplementation of a log system for the website and all the associated processes of Pobeda Airlines LLC, including the preparation of the tools for the visualization and analysis of these logs, using ElasticSearch and the full Elastic stack.\n\nPerformed maintenance tasks in the backend of the webpage (C#) and little modifications in the frontend (JavaScript).\n\nWorking environment consisting of agile methodology (SCRUM) using Jira, Microsoft Project y Git workflow. In the team we used the SOLID principles and we made code revisions, including the development of the unit tests needed with NUnit."
   },
   {
-    "title": "Desarrollador sénior .NET",
+    "title": "Senior .NET developer",
+    "image": "clinica_baviera.jpg",
+    "website": "http://www.clinicabaviera.com",
     "place": "Clínica Baviera",
-    "period": "may. de 2016 - oct. de 2017 (6 meses)",
-    "description": "Desarrollo del programa de fidelización de clientes, incluyendo la creación de la web API del sistema con ASP.NET. Realización de tareas de mantenimiento en el sistema centralizado de gestión de las clínicas, empleando C# y Team Foundation Server (TFS) en un entorno SCRUM."
+    "period": "may. 2016 - oct. 2017 (6 months)",
+    "description": "Development of the customer fidelity project, including the creation of the web API with ASP.NET and the database design (MS-SQL).\n\nI performed also maintenance tasks in the centralized system in charge of the management of the clinics, using C# and Team Foundation Server (TFS) in a SCRUM environment."
   },
   {
-    "title": "Desarrollador sénior",
+    "title": "Senior developer",
+    "image": "advantic_consultores.png",
+    "website": "http://www.advantic.info",
     "place": "Advantic Consultores",
-    "period": "nov. de 2014 - abr. de 2016 (1 año y 6 meses)",
-    "description": "Desarrollos personalizados para el cliente final de webs basadas en Magento, con modificaciones del core mediante PHP y puesta en producción de las mismas, encargándome del mantenimiento posterior. Desarrollo durante año y medio de la aplicación Android para cliente final en el negocio de la logística de la alimentación, que es empleada en tablets por los repartidores de la empresa con las siguientes funcionalidades: - Gestionar e informar acerca del stock y su formato al repartidor - Gestionar ventas, reservas y facturas - Gestionar usuarios y credenciales para evitar interferencias con otros compañeros - Incluir un sistema de catálogo para que los repartidores puedan vender nuevos        artículos directamente al cliente        - Sincronización de información con 2 ERPs (SAP y EKON)        Para ello se creó una arquitectura basada en servicios web SOAP mediante ASP.NET, con        una API intermedia empleando EntityFramework que permitían la sincronización de la        información existente en el ERP para que estuviera actualizada en las tablets, tanto        bajo demanda como cacheada para los casos en los que el repartidor no tuviera cobertura por realizar rutas de montaña. También se realizaron varios desarrollos personalizados en .NET y SAP para clientes finales."
+    "period": "nov. 2014 - abr. 2016 (1 year and 6 months)",
+    "description": "Customized developments for the final client of Magento websites, with core modifications using PHP and deploy in production. Development during a year and a half of an Android application in the logistics bussiness with this functionalities:\n\n- Manage and show information about the current stock and its format to the delivery employee\n- Manage sales and orders\n- Manage users and its credentials\n- A catalog system so the delivery employments are able to sell new articles directly to the client\n- Syncronization with SAP and EKON, using a SOAP-based arquitecture with an API based on EntityFramework\n\nFor this project I designed and architecture based in SOAP web services using ASP.NET, with a middleware API that allowed the tablets to syncronize all the information with the implemented ERP.\n\nOther customized .NET and SAP projects were made too."
   },
   {
-    "title": "Desarrollador junior",
+    "title": "Junior developer",
+    "image": "cuchilleria_deportiva.png",
+    "website": "https://www.cuchilleriadeportiva.es/",
     "place": "Cuchillería Deportiva S.L.",
-    "period": "feb. de 2014 - may. de 2014 (4 meses)",
-    "description": "periodo de prácticas como desarrollador web y móvil en una empresa de venta online de cuchillería de Albacete. Durante las prácticas se realizaron diversas tareas, como la creación de webs asociadas (blogs), mejoras en la web principal (www.cuchilleriadeportiva.es), realización de tareas de posicionamiento (SEO y SEM) y desarrollo de la versión móvil de la página."
+    "period": "feb. 2014 - may. 2014 (4 months)",
+    "description": "Web and mobile developer in a online selling company in Albacete. I performed multiple tasks like the development of other websites, improvements in the main website, SEO and SEM tasks and development of the mobile version of the site."
   },
   {
-    "title": "Desarrollador en prácticas",
-    "place": "Delaware",
-    "period": "nov. de 2013 - feb. de 2014 (4 meses)",
-    "description": "Miembro del equipo de desarrollo de una página web gubernamental de gestión para el gobierno de Cantabria. El desarrollo se realizó mediante las tecnologías web basadas en J2EE, Struts, Spring e Hibernate."
+    "title": "Traineeship developer",
+    "image": "grupo_delaware.png",
+    "website": "http://www.grupodelaware.com/",
+    "place": "Grupo Delaware",
+    "period": "nov. 2013 - feb. 2014 (4 months)",
+    "description": "Member of the development team in the project of the creation of a governmental website for the management of the unemployment benefits in Cantabria. The development was performed with web technologies in the Java environment (J2EE, Struts, Spring and Hibernate)."
   }
 ]
 

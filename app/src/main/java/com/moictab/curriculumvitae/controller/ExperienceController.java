@@ -23,4 +23,9 @@ public class ExperienceController extends BaseController {
 
         return new Gson().fromJson(GetJsonFromResources(context, EXPERIENCES_FILENAME), list);
     }
+
+    public Experience GetExperienceFromAssetsById(Context context, int id) {
+        List<Experience> experiences = GetExperiencesFromAssets(context);
+        return experiences.get(id);
+    }
 }
