@@ -1,6 +1,9 @@
 package com.moictab.curriculumvitae.activities;
 
+import android.app.ActionBar;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -44,9 +47,6 @@ public class ExperienceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_experience);
         ButterKnife.bind(this);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
         if (getIntent().getExtras() != null) {
             experienceId = getIntent().getExtras().getInt(EXPERIENCE_ID);
         }
@@ -54,12 +54,21 @@ public class ExperienceActivity extends AppCompatActivity {
         ExperienceController controller = new ExperienceController();
         experience = controller.GetExperienceFromAssetsById(this, experienceId);
 
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(experience.place);
+
         ((TextView) viewTitle.findViewById(R.id.textview_titulo)).setText(R.string.title);
         ((TextView) viewTitle.findViewById(R.id.textview_texto)).setText(experience.title);
 
         ((TextView) viewWebsite.findViewById(R.id.textview_titulo)).setText(R.string.website);
         ((TextView) viewWebsite.findViewById(R.id.textview_texto)).setText(experience.website);
-        ((TextView) viewWebsite.findViewById(R.id.textview_texto)).setAutoLinkMask(Linkify.WEB_URLS);
+        this.findViewById(R.id.iv_open_in_browser).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(experience.website));
+                startActivity(browserIntent);
+            }
+        });
 
         ((TextView) viewPeriod.findViewById(R.id.textview_titulo)).setText(R.string.period);
         ((TextView) viewPeriod.findViewById(R.id.textview_texto)).setText(experience.period);

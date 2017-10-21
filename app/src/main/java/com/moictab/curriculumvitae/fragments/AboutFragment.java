@@ -4,32 +4,21 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.moictab.curriculumvitae.R;
-import com.moictab.curriculumvitae.adapters.ExperiencesAdapter;
-import com.moictab.curriculumvitae.controller.ExperienceController;
-import com.moictab.curriculumvitae.model.Experience;
-
-import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link ExperienceFragment.OnFragmentInteractionListener} interface
+ * {@link AboutFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link ExperienceFragment#newInstance} factory method to
+ * Use the {@link AboutFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ExperienceFragment extends Fragment {
-
-    private RecyclerView.Adapter adapter;
-    private RecyclerView.LayoutManager layoutManager;
-
+public class AboutFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -41,7 +30,7 @@ public class ExperienceFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public ExperienceFragment() {
+    public AboutFragment() {
         // Required empty public constructor
     }
 
@@ -51,11 +40,11 @@ public class ExperienceFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ExperienceFragment.
+     * @return A new instance of fragment AboutFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ExperienceFragment newInstance(String param1, String param2) {
-        ExperienceFragment fragment = new ExperienceFragment();
+    public static AboutFragment newInstance(String param1, String param2) {
+        AboutFragment fragment = new AboutFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -75,23 +64,9 @@ public class ExperienceFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        getActivity().setTitle(getString(R.string.experience_fragment_title));
-
-        List<Experience> experiences = new ExperienceController().GetExperiencesFromAssets(getActivity());
-
-        View view = inflater.inflate(R.layout.fragment_experience, container, false);
-        RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
-        recyclerView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(layoutManager);
-        adapter = new ExperiencesAdapter(experiences, getActivity());
-        recyclerView.setAdapter(adapter);
-
         // Inflate the layout for this fragment
-        return view;
+        return inflater.inflate(R.layout.fragment_about, container, false);
     }
-
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {

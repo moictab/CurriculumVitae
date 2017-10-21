@@ -130,4 +130,10 @@
     <string name="no_email_clients_installed">There are no email clients installed</string>
     <string name="website">Website</string>
     <string name="title">Title</string>
+    <string name="contact_fragment_title">Contact</string>
+    <string name="experience_fragment_title">Experience</string>
+    <string name="formation_fragment_title">Formation</string>
+    <string name="presentation_fragment_title">Presentation</string>
+    <string name="projects_fragment_title">Projects</string>
+    <string name="view_detail">View detail</string>
 </resources>

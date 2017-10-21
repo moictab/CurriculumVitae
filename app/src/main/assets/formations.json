@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Master in web technologies",
+    "place": "Universidad de Castilla-La Mancha",
+    "dates": "2013 - 2014",
+    "imageName": "mtw.png"
+  },
+  {
+    "name": "Degree in computer engineering, intenisification in software engineering",
+    "place": "Universidad de Castilla-La Mancha",
+    "dates": "2007 - 2013",
+    "imageName": "uclm.jpg"
+  },
+  {
+    "name": "Windows Phone application development workshop",
+    "place": "Universidad de Castilla-La Mancha",
+    "dates": "20011",
+    "imageName": "windows_phone.jpg"
+  },
+  {
+    "name": "Development of advanced interfaces workshop",
+    "place": "Universidad de Castilla-La Mancha",
+    "dates": "2011",
+    "imageName": "uclm.jpg"
+  }
+]
+

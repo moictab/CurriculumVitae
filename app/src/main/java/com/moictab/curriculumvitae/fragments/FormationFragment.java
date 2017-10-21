@@ -4,11 +4,19 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.moictab.curriculumvitae.R;
+import com.moictab.curriculumvitae.adapters.ExperiencesAdapter;
+import com.moictab.curriculumvitae.adapters.FormationAdapter;
+import com.moictab.curriculumvitae.controller.FormationController;
+import com.moictab.curriculumvitae.model.Formation;
+
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,6 +27,10 @@ import com.moictab.curriculumvitae.R;
  * create an instance of this fragment.
  */
 public class FormationFragment extends Fragment {
+
+    private RecyclerView.Adapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -64,8 +76,21 @@ public class FormationFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        getActivity().setTitle(getString(R.string.formation_fragment_title));
+
+        List<Formation> formations = new FormationController().GetFormationsFromAssets(getActivity());
+
+        View view = inflater.inflate(R.layout.fragment_formation, container, false);
+        RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
+        recyclerView.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager(layoutManager);
+        adapter = new FormationAdapter(formations, getActivity());
+        recyclerView.setAdapter(adapter);
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_formation, container, false);
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

@@ -1,6 +1,6 @@
 [
   {
-    "title": "Consultor",
+    "title": "Consultant",
     "image": "newshore.jpg",
     "website": "http://www.newshore.es",
     "place": "Newshore",
@@ -21,7 +21,7 @@
     "website": "http://www.advantic.info",
     "place": "Advantic Consultores",
     "period": "nov. 2014 - abr. 2016 (1 year and 6 months)",
-    "description": "Customized developments for the final client of Magento websites, with core modifications using PHP and deploy in production. Development during a year and a half of an Android application in the logistics bussiness with this functionalities:\n\n- Manage and show information about the current stock and its format to the delivery employee\n- Manage sales and orders\n- Manage users and its credentials\n- A catalog system so the delivery employments are able to sell new articles directly to the client\n- Syncronization with SAP and EKON, using a SOAP-based arquitecture with an API based on EntityFramework\n\nFor this project I designed and architecture based in SOAP web services using ASP.NET, with a middleware API that allowed the tablets to syncronize all the information with the implemented ERP.\n\nOther customized .NET and SAP projects were made too."
+    "description": "Customized developments for the final client of Magento websites, with core modifications using PHP and deploy in production. Development during a year and a half of an Android application in the logistics bussiness with this functionalities:\n\n· Manage and show information about the current stock and its format to the delivery employee\n· Manage sales and orders\n· Manage users and its credentials\n· A catalog system so the delivery employments are able to sell new articles directly to the client\n· Syncronization with SAP and EKON, using a SOAP-based arquitecture with an API based on EntityFramework\n\nFor this project I designed and architecture based in SOAP web services using ASP.NET, with a middleware API that allowed the tablets to syncronize all the information with the implemented ERP.\n\nOther customized .NET and SAP projects were made too."
   },
   {
     "title": "Junior developer",

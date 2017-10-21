@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -43,6 +44,7 @@ public class ExperiencesAdapter extends RecyclerView.Adapter<ExperiencesAdapter.
         TextView tvPeriod;
         TextView tvPlace;
         ImageView ivExperience;
+        Button btnViewDetails;
 
         ExperienceViewHolder(final View itemView) {
             super(itemView);
@@ -51,8 +53,9 @@ public class ExperiencesAdapter extends RecyclerView.Adapter<ExperiencesAdapter.
             tvPeriod = itemView.findViewById(R.id.tv_period);
             tvPlace = itemView.findViewById(R.id.tv_place);
             ivExperience = itemView.findViewById(R.id.iv_experience);
+            btnViewDetails = itemView.findViewById(R.id.btn_view_detail);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
+            btnViewDetails.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Context context = itemView.getContext();

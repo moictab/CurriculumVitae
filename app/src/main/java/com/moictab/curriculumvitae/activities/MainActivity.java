@@ -13,7 +13,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.mikepenz.aboutlibraries.LibsBuilder;
+import com.mikepenz.aboutlibraries.ui.LibsFragment;
 import com.moictab.curriculumvitae.R;
+import com.moictab.curriculumvitae.fragments.AboutFragment;
 import com.moictab.curriculumvitae.fragments.ContactFragment;
 import com.moictab.curriculumvitae.fragments.ExperienceFragment;
 import com.moictab.curriculumvitae.fragments.FormationFragment;
@@ -26,7 +29,8 @@ public class MainActivity extends AppCompatActivity implements
         PresentationFragment.OnFragmentInteractionListener,
         FormationFragment.OnFragmentInteractionListener,
         ContactFragment.OnFragmentInteractionListener,
-        ProjectsFragment.OnFragmentInteractionListener {
+        ProjectsFragment.OnFragmentInteractionListener,
+        AboutFragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,10 +104,14 @@ public class MainActivity extends AppCompatActivity implements
         } else if (id == R.id.nav_contact) {
             Fragment fragment = new ContactFragment();
             manager.beginTransaction().replace(R.id.base_layout, fragment).commit();
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_about) {
 
-        } else if (id == R.id.nav_send) {
+            //LibsFragment fragment = new LibsBuilder()
+            //get the fragment
+            //.fragment();
 
+            Fragment fragment = new AboutFragment();
+            manager.beginTransaction().replace(R.id.base_layout, fragment).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

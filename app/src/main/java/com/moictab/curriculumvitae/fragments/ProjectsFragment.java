@@ -77,6 +77,8 @@ public class ProjectsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        getActivity().setTitle(getString(R.string.projects_fragment_title));
+
         List<Project> projects = new ProjectController().GetProjectsFromAssets(getActivity());
 
         View view = inflater.inflate(R.layout.fragment_projects, container, false);

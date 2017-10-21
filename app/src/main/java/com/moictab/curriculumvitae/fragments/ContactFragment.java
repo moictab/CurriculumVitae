@@ -87,6 +87,7 @@ public class ContactFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_contact, container, false);
         ButterKnife.bind(this, view);
+        getActivity().setTitle(getString(R.string.contact_fragment_title));
 
         buttonEmail.setOnClickListener(new View.OnClickListener() {
             @Override
