@@ -136,4 +136,14 @@
     <string name="presentation_fragment_title">Presentation</string>
     <string name="projects_fragment_title">Projects</string>
     <string name="view_detail">View detail</string>
+    <string name="hecho_por_moises_cano">Made by: Moisés Cano Torralba</string>
+    <string name="source_code">The source code is available at: </string>
+    <string name="github">https://github.com/moictab/CurriculumVitae</string>
+    <string name="version">Version: 1.0</string>
+    <string name="libraries_used">Libraries used:</string>
+    <string name="google_gson">google/gson</string>
+    <string name="butterknife">JakeWharton/butterknife</string>
+    <string name="moises_cano_torralba">Moisés\n Cano Torralba</string>
+    <string name="developer">Android developer</string>
+    <string name="explore_my_app">Explore my app to know more about me</string>
 </resources>

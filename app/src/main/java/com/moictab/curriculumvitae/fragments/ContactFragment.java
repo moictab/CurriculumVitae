@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.moictab.curriculumvitae.R;
@@ -31,13 +32,13 @@ import butterknife.ButterKnife;
 public class ContactFragment extends Fragment {
 
     @BindView(R.id.button_email)
-    Button buttonEmail;
+    ImageButton buttonEmail;
 
     @BindView(R.id.button_linkedin)
-    Button buttonLinkedin;
+    ImageButton buttonLinkedin;
 
     @BindView(R.id.button_phone)
-    Button buttonPhone;
+    ImageButton buttonPhone;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

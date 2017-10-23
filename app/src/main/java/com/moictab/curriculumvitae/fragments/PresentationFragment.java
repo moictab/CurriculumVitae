@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.moictab.curriculumvitae.R;
 
@@ -67,8 +68,15 @@ public class PresentationFragment extends Fragment {
 
         getActivity().setTitle(getString(R.string.presentation_fragment_title));
 
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_presentation, container, false);
+        View view = inflater.inflate(R.layout.fragment_presentation, container, false);
+
+        ImageView ivIcon = view.findViewById(R.id.iv_icon);
+        ivIcon.setImageResource(R.mipmap.moidroid);
+
+        ImageView ivFont = view.findViewById(R.id.iv_name);
+        ivFont.setImageResource(R.mipmap.moi_font);
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

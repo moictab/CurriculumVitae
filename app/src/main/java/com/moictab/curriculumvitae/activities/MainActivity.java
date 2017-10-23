@@ -13,8 +13,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.mikepenz.aboutlibraries.LibsBuilder;
-import com.mikepenz.aboutlibraries.ui.LibsFragment;
 import com.moictab.curriculumvitae.R;
 import com.moictab.curriculumvitae.fragments.AboutFragment;
 import com.moictab.curriculumvitae.fragments.ContactFragment;
@@ -39,6 +37,9 @@ public class MainActivity extends AppCompatActivity implements
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        Fragment fragment = new PresentationFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.base_layout, fragment).commit();
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.getMenu().getItem(0).setChecked(true);
     }
 
     @Override
@@ -61,19 +63,14 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
+        return false;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
@@ -84,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
+
         int id = item.getItemId();
 
         FragmentManager manager = getSupportFragmentManager();
@@ -105,11 +102,6 @@ public class MainActivity extends AppCompatActivity implements
             Fragment fragment = new ContactFragment();
             manager.beginTransaction().replace(R.id.base_layout, fragment).commit();
         } else if (id == R.id.nav_about) {
-
-            //LibsFragment fragment = new LibsBuilder()
-            //get the fragment
-            //.fragment();
-
             Fragment fragment = new AboutFragment();
             manager.beginTransaction().replace(R.id.base_layout, fragment).commit();
         }

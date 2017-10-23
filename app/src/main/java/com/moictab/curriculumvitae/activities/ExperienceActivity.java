@@ -8,10 +8,12 @@ import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.util.Linkify;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -56,6 +58,7 @@ public class ExperienceActivity extends AppCompatActivity {
 
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle(experience.place);
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         ((TextView) viewTitle.findViewById(R.id.textview_titulo)).setText(R.string.title);
         ((TextView) viewTitle.findViewById(R.id.textview_texto)).setText(experience.title);
@@ -75,5 +78,17 @@ public class ExperienceActivity extends AppCompatActivity {
 
         ((TextView) viewDescription.findViewById(R.id.textview_titulo)).setText(R.string.description);
         ((TextView) viewDescription.findViewById(R.id.textview_texto)).setText(experience.description);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

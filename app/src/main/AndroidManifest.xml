@@ -20,7 +20,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.ExperienceActivity" />
+        <activity
+            android:name=".activities.ExperienceActivity"
+            android:parentActivityName=".activities.MainActivity" />
         <activity android:name=".activities.FormationActivity" />
         <activity android:name=".activities.ProjectActivity" />
     </application>
