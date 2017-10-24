@@ -11,14 +11,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:layout_marginTop="96dp" />
+        android:layout_marginTop="32dp" />
 
     <ImageView
         android:id="@+id/iv_name"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:layout_marginTop="32dp" />
+        android:layout_height="wrap_content" />
 
     <View
         android:layout_width="1dp"

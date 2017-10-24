@@ -10,7 +10,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -96,11 +95,9 @@ public class ContactFragment extends Fragment {
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("message/rfc822");
                 intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"xxx@gmail.com"});
-                intent.putExtra(Intent.EXTRA_SUBJECT, "CONTRATADO");
-                intent.putExtra(Intent.EXTRA_TEXT, "Nos ha gustado tanto tu app que te contratamos");
 
                 try {
-                    startActivity(Intent.createChooser(intent, "Enviar email..."));
+                    startActivity(Intent.createChooser(intent, "Send email..."));
                 } catch (android.content.ActivityNotFoundException ex) {
                     Toast.makeText(getActivity(), R.string.no_email_clients_installed, Toast.LENGTH_SHORT).show();
                 }
