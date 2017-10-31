@@ -11,22 +11,21 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.moictab.curriculumvitae.R;
-import com.moictab.curriculumvitae.adapters.ExperiencesAdapter;
-import com.moictab.curriculumvitae.adapters.FormationAdapter;
-import com.moictab.curriculumvitae.controller.FormationController;
-import com.moictab.curriculumvitae.model.Formation;
+import com.moictab.curriculumvitae.adapters.TrainingAdapter;
+import com.moictab.curriculumvitae.controller.TrainingController;
+import com.moictab.curriculumvitae.model.Training;
 
 import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link FormationFragment.OnFragmentInteractionListener} interface
+ * {@link TrainingFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link FormationFragment#newInstance} factory method to
+ * Use the {@link TrainingFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FormationFragment extends Fragment {
+public class TrainingFragment extends Fragment {
 
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
@@ -42,7 +41,7 @@ public class FormationFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public FormationFragment() {
+    public TrainingFragment() {
         // Required empty public constructor
     }
 
@@ -52,11 +51,11 @@ public class FormationFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment FormationFragment.
+     * @return A new instance of fragment TrainingFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static FormationFragment newInstance(String param1, String param2) {
-        FormationFragment fragment = new FormationFragment();
+    public static TrainingFragment newInstance(String param1, String param2) {
+        TrainingFragment fragment = new TrainingFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -77,16 +76,16 @@ public class FormationFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        getActivity().setTitle(getString(R.string.formation_fragment_title));
+        getActivity().setTitle(getString(R.string.training_fragment_title));
 
-        List<Formation> formations = new FormationController().GetFormationsFromAssets(getActivity());
+        List<Training> trainings = new TrainingController().GetTrainingsFromAssets(getActivity());
 
-        View view = inflater.inflate(R.layout.fragment_formation, container, false);
+        View view = inflater.inflate(R.layout.fragment_training, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
-        adapter = new FormationAdapter(formations, getActivity());
+        adapter = new TrainingAdapter(trainings, getActivity());
         recyclerView.setAdapter(adapter);
 
         // Inflate the layout for this fragment

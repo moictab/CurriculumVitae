@@ -13,9 +13,9 @@
             android:icon="@drawable/ic_work"
             android:title="@string/experience" />
         <item
-            android:id="@+id/nav_formation"
+            android:id="@+id/nav_training"
             android:icon="@drawable/ic_book"
-            android:title="@string/formation" />
+            android:title="@string/training" />
         <item
             android:id="@+id/nav_projects"
             android:icon="@drawable/ic_android"

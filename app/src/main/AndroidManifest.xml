@@ -23,7 +23,7 @@
         <activity
             android:name=".activities.ExperienceActivity"
             android:parentActivityName=".activities.MainActivity" />
-        <activity android:name=".activities.FormationActivity" />
+        <activity android:name=".activities.TrainingActivity" />
         <activity android:name=".activities.ProjectActivity" />
     </application>
 

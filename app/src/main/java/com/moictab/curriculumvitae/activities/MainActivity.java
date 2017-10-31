@@ -17,7 +17,7 @@ import com.moictab.curriculumvitae.R;
 import com.moictab.curriculumvitae.fragments.AboutFragment;
 import com.moictab.curriculumvitae.fragments.ContactFragment;
 import com.moictab.curriculumvitae.fragments.ExperienceFragment;
-import com.moictab.curriculumvitae.fragments.FormationFragment;
+import com.moictab.curriculumvitae.fragments.TrainingFragment;
 import com.moictab.curriculumvitae.fragments.PresentationFragment;
 import com.moictab.curriculumvitae.fragments.ProjectsFragment;
 
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener,
         ExperienceFragment.OnFragmentInteractionListener,
         PresentationFragment.OnFragmentInteractionListener,
-        FormationFragment.OnFragmentInteractionListener,
+        TrainingFragment.OnFragmentInteractionListener,
         ContactFragment.OnFragmentInteractionListener,
         ProjectsFragment.OnFragmentInteractionListener,
         AboutFragment.OnFragmentInteractionListener {
@@ -92,8 +92,8 @@ public class MainActivity extends AppCompatActivity implements
         } else if (id == R.id.nav_experience) {
             Fragment fragment = new ExperienceFragment();
             manager.beginTransaction().replace(R.id.base_layout, fragment).commit();
-        } else if (id == R.id.nav_formation) {
-            Fragment fragment = new FormationFragment();
+        } else if (id == R.id.nav_training) {
+            Fragment fragment = new TrainingFragment();
             manager.beginTransaction().replace(R.id.base_layout, fragment).commit();
         } else if (id == R.id.nav_projects) {
             Fragment fragment = new ProjectsFragment();

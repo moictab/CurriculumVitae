@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
  * Created by moict on 19/10/2017.
  */
 
-public class Formation {
+public class Training {
 
     @SerializedName("name")
     public String name;
