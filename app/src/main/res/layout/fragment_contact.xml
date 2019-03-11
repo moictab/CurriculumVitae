@@ -1,61 +1,58 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:gravity="center"
+  android:orientation="vertical"
+  tools:context="com.moictab.curriculumvitae.fragments.ContactFragment">
+  <TextView
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="64dp"
     android:gravity="center"
-    android:orientation="vertical"
-    tools:context="com.moictab.curriculumvitae.fragments.ContactFragment">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"
-        android:gravity="center"
-        android:minLines="2"
-        android:text="If you want to contact with me,\nyou can use any of this"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/button_email"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_marginRight="32dp"
-            android:alpha="0.5"
-            android:autoLink="map"
-            android:background="@android:color/transparent"
-            android:padding="4dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_email"
-            android:text="Placeholder" />
-
-        <ImageButton
-            android:id="@+id/button_linkedin"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_marginRight="32dp"
-            android:alpha="0.5"
-            android:background="@android:color/transparent"
-            android:padding="4dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/linkedin"
-            android:text="Placeholder" />
-
-        <ImageButton
-            android:id="@+id/button_phone"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:alpha="0.5"
-            android:background="@android:color/transparent"
-            android:padding="4dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_phone"
-            android:text="Placeholder" />
-    </LinearLayout>
-
+    android:minLines="2"
+    android:text="@string/contact_long_text"
+    android:textSize="16sp"/>
+  <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <ImageButton
+      android:id="@+id/btn_email"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:layout_marginEnd="32dp"
+      android:padding="4dp"
+      android:alpha="0.5"
+      android:autoLink="map"
+      android:background="@android:color/transparent"
+      android:contentDescription="@string/email"
+      android:scaleType="fitCenter"
+      android:src="@drawable/ic_email"
+      tools:text="Placeholder"/>
+    <ImageButton
+      android:id="@+id/btn_linkedin"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:layout_marginEnd="32dp"
+      android:padding="4dp"
+      android:alpha="0.5"
+      android:background="@android:color/transparent"
+      android:contentDescription="@string/linkedin"
+      android:scaleType="fitCenter"
+      android:src="@drawable/linkedin"
+      tools:text="Placeholder"/>
+    <ImageButton
+      android:id="@+id/btn_phone"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:padding="4dp"
+      android:alpha="0.5"
+      android:background="@android:color/transparent"
+      android:contentDescription="@string/phone"
+      android:scaleType="fitCenter"
+      android:src="@drawable/ic_phone"
+      tools:text="Placeholder"/>
+  </LinearLayout>
 </LinearLayout>

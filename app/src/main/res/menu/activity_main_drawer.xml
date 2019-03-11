@@ -1,38 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <group
-        android:id="@+id/main_group"
-        android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_presentation"
-            android:icon="@drawable/ic_account_circle"
-            android:title="@string/presentation" />
-        <item
-            android:id="@+id/nav_experience"
-            android:icon="@drawable/ic_work"
-            android:title="@string/experience" />
-        <item
-            android:id="@+id/nav_training"
-            android:icon="@drawable/ic_book"
-            android:title="@string/training" />
-        <item
-            android:id="@+id/nav_projects"
-            android:icon="@drawable/ic_android"
-            android:title="@string/projects" />
-        <item
-            android:id="@+id/nav_contact"
-            android:icon="@drawable/ic_mail"
-            android:title="@string/contact" />
-    </group>
-
-    <group
-        android:id="@+id/secondary_group"
-        android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_about"
-            android:icon="@drawable/ic_about"
-            android:title="About" />
-    </group>
-
+  <group
+    android:checkableBehavior="single">
+    <item
+      android:id="@+id/nav_presentation"
+      android:icon="@drawable/ic_account_circle"
+      android:title="@string/presentation"/>
+    <item
+      android:id="@+id/nav_experience"
+      android:icon="@drawable/ic_work"
+      android:title="@string/experience"/>
+    <item
+      android:id="@+id/nav_training"
+      android:icon="@drawable/ic_book"
+      android:title="@string/training"/>
+    <item
+      android:id="@+id/nav_projects"
+      android:icon="@drawable/ic_android"
+      android:title="@string/projects"/>
+    <item
+      android:id="@+id/nav_contact"
+      android:icon="@drawable/ic_mail"
+      android:title="@string/contact"/>
+  </group>
+  <group
+    android:checkableBehavior="single">
+    <item
+      android:id="@+id/nav_about"
+      android:icon="@drawable/ic_about"
+      android:title="@string/about"/>
+  </group>
 </menu>
