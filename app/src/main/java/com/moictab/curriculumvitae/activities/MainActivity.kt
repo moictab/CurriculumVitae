@@ -15,15 +15,23 @@ import com.moictab.curriculumvitae.R
 import com.moictab.curriculumvitae.fragments.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, ExperienceFragment.OnFragmentInteractionListener, PresentationFragment.OnFragmentInteractionListener, TrainingFragment.OnFragmentInteractionListener, ContactFragment.OnFragmentInteractionListener, ProjectsFragment.OnFragmentInteractionListener, AboutFragment.OnFragmentInteractionListener {
+
+  private lateinit var drawerLayout: DrawerLayout
+  private lateinit var toolbar: Toolbar
+
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
-    val toolbar = findViewById<View>(R.id.toolbar) as Toolbar
+    toolbar = findViewById<View>(R.id.toolbar) as Toolbar
     setSupportActionBar(toolbar)
     supportFragmentManager.beginTransaction().replace(R.id.base_layout, PresentationFragment.newInstance()).commit()
-    val drawer = findViewById<View>(R.id.drawer_layout) as DrawerLayout
-    val toggle = ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
-    drawer.addDrawerListener(toggle)
+    setNavigationDrawer()
+  }
+
+  private fun setNavigationDrawer() {
+    drawerLayout = findViewById<View>(R.id.drawer_layout) as DrawerLayout
+    val toggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+    drawerLayout.addDrawerListener(toggle)
     toggle.syncState()
     val navigationView = findViewById<View>(R.id.nav_view) as NavigationView
     navigationView.setNavigationItemSelectedListener(this)
@@ -31,9 +39,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
   }
 
   override fun onBackPressed() {
-    val drawer = findViewById<View>(R.id.drawer_layout) as DrawerLayout
-    if (drawer.isDrawerOpen(GravityCompat.START)) {
-      drawer.closeDrawer(GravityCompat.START)
+    drawerLayout = findViewById<View>(R.id.drawer_layout) as DrawerLayout
+    if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+      drawerLayout.closeDrawer(GravityCompat.START)
     } else {
       super.onBackPressed()
     }
@@ -45,30 +53,28 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
   override fun onNavigationItemSelected(item: MenuItem): Boolean {
     val id = item.itemId
-    val manager = supportFragmentManager
     when (id) {
       R.id.nav_presentation -> {
-        manager.beginTransaction().replace(R.id.base_layout, PresentationFragment.newInstance()).commit()
+        supportFragmentManager.beginTransaction().replace(R.id.base_layout, PresentationFragment.newInstance()).commit()
       }
       R.id.nav_experience -> {
-        manager.beginTransaction().replace(R.id.base_layout, ExperienceFragment.newInstance()).commit()
+        supportFragmentManager.beginTransaction().replace(R.id.base_layout, ExperienceFragment.newInstance()).commit()
       }
       R.id.nav_training -> {
-        manager.beginTransaction().replace(R.id.base_layout, TrainingFragment.newInstance()).commit()
+        supportFragmentManager.beginTransaction().replace(R.id.base_layout, TrainingFragment.newInstance()).commit()
       }
       R.id.nav_projects -> {
-        manager.beginTransaction().replace(R.id.base_layout, ProjectsFragment.newInstance()).commit()
+        supportFragmentManager.beginTransaction().replace(R.id.base_layout, ProjectsFragment.newInstance()).commit()
       }
       R.id.nav_contact -> {
-        manager.beginTransaction().replace(R.id.base_layout, ContactFragment.newInstance()).commit()
+        supportFragmentManager.beginTransaction().replace(R.id.base_layout, ContactFragment.newInstance()).commit()
       }
       R.id.nav_about -> {
-        manager.beginTransaction().replace(R.id.base_layout, AboutFragment.newInstance()).commit()
+        supportFragmentManager.beginTransaction().replace(R.id.base_layout, AboutFragment.newInstance()).commit()
       }
     }
 
-    val drawer = findViewById<View>(R.id.drawer_layout) as DrawerLayout
-    drawer.closeDrawer(GravityCompat.START)
+    drawerLayout.closeDrawer(GravityCompat.START)
     return true
   }
 
