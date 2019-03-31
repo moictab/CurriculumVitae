@@ -20,8 +20,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     setContentView(R.layout.activity_main)
     val toolbar = findViewById<View>(R.id.toolbar) as Toolbar
     setSupportActionBar(toolbar)
-    val fragment = PresentationFragment()
-    supportFragmentManager.beginTransaction().replace(R.id.base_layout, fragment).commit()
+    supportFragmentManager.beginTransaction().replace(R.id.base_layout, PresentationFragment.newInstance()).commit()
     val drawer = findViewById<View>(R.id.drawer_layout) as DrawerLayout
     val toggle = ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
     drawer.addDrawerListener(toggle)
@@ -49,28 +48,22 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     val manager = supportFragmentManager
     when (id) {
       R.id.nav_presentation -> {
-        val fragment = PresentationFragment()
-        manager.beginTransaction().replace(R.id.base_layout, fragment).commit()
+        manager.beginTransaction().replace(R.id.base_layout, PresentationFragment.newInstance()).commit()
       }
       R.id.nav_experience -> {
-        val fragment = ExperienceFragment()
-        manager.beginTransaction().replace(R.id.base_layout, fragment).commit()
+        manager.beginTransaction().replace(R.id.base_layout, ExperienceFragment.newInstance()).commit()
       }
       R.id.nav_training -> {
-        val fragment = TrainingFragment()
-        manager.beginTransaction().replace(R.id.base_layout, fragment).commit()
+        manager.beginTransaction().replace(R.id.base_layout, TrainingFragment.newInstance()).commit()
       }
       R.id.nav_projects -> {
-        val fragment = ProjectsFragment()
-        manager.beginTransaction().replace(R.id.base_layout, fragment).commit()
+        manager.beginTransaction().replace(R.id.base_layout, ProjectsFragment.newInstance()).commit()
       }
       R.id.nav_contact -> {
-        val fragment = ContactFragment()
-        manager.beginTransaction().replace(R.id.base_layout, fragment).commit()
+        manager.beginTransaction().replace(R.id.base_layout, ContactFragment.newInstance()).commit()
       }
       R.id.nav_about -> {
-        val fragment = AboutFragment()
-        manager.beginTransaction().replace(R.id.base_layout, fragment).commit()
+        manager.beginTransaction().replace(R.id.base_layout, AboutFragment.newInstance()).commit()
       }
     }
 

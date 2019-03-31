@@ -31,6 +31,12 @@ class AboutFragment : Fragment() {
     onFragmentInteractionListener = null
   }
 
+  companion object {
+    fun newInstance(): AboutFragment {
+      return AboutFragment()
+    }
+  }
+
   interface OnFragmentInteractionListener {
     fun onFragmentInteraction(uri: Uri)
   }

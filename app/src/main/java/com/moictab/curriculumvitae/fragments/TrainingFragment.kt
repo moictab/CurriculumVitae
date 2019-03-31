@@ -46,6 +46,12 @@ class TrainingFragment : Fragment() {
     mListener = null
   }
 
+  companion object {
+    fun newInstance(): TrainingFragment {
+      return TrainingFragment()
+    }
+  }
+
   interface OnFragmentInteractionListener {
     // TODO: Update argument type and name
     fun onFragmentInteraction(uri: Uri)

@@ -46,6 +46,12 @@ class ProjectsFragment : Fragment() {
     onFragmentInteractionListener = null
   }
 
+  companion object {
+    fun newInstance(): ProjectsFragment {
+      return ProjectsFragment()
+    }
+  }
+
   interface OnFragmentInteractionListener {
     fun onFragmentInteraction(uri: Uri)
   }

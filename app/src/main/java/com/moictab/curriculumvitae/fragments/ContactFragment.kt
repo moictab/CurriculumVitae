@@ -74,5 +74,9 @@ class ContactFragment : Fragment() {
 
   companion object {
     const val TAG = "ContactFragment"
+
+    fun newInstance(): ContactFragment {
+      return ContactFragment()
+    }
   }
 }

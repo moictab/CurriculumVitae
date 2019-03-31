@@ -12,6 +12,7 @@ import android.widget.ImageView
 import com.moictab.curriculumvitae.R
 
 class PresentationFragment : Fragment() {
+
   private var onFragmentInteractionListener: OnFragmentInteractionListener? = null
 
   override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -36,6 +37,12 @@ class PresentationFragment : Fragment() {
   override fun onDetach() {
     super.onDetach()
     onFragmentInteractionListener = null
+  }
+
+  companion object {
+    fun newInstance(): PresentationFragment {
+      return PresentationFragment()
+    }
   }
 
   interface OnFragmentInteractionListener {

@@ -46,6 +46,12 @@ class ExperienceFragment : Fragment() {
     onFragmentInteractionListener = null
   }
 
+  companion object {
+    fun newInstance(): ExperienceFragment {
+      return ExperienceFragment()
+    }
+  }
+
   interface OnFragmentInteractionListener {
     fun onFragmentInteraction(uri: Uri)
   }
